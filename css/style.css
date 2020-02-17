@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: hsla(0, 0%, 90%, 1);
+}
+
+#header {
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 20vh;
+  max-height: 100px;
+  min-height: 70px;
+  margin: auto;
+  background-color: hsla(0, 0%, 90%, 1);
+}
+
+#header-img {
+  align-self: center;
+  flex-grow: 1;
+  height: 40%;
+  max-width: 25%;
+  min-width: 300px;
+}
+
+#nav-bar {
+  display: flex;
+  flex-grow: 3;
+  align-self: center;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80%;
+}
+
+.nav-link {
+  display: flex;
+  flex-flow:  row;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  font-size: 1em;
+  list-style-type: none;
+}
+
+.nav-link a, a:link, a:hover, a:active, a:visited {
+  text-decoration:  none;
+  color: inherit;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+  background-color: hsla(0, 0%, 90%, 1);
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+  padding: 10px 0;
+}
+
+
+#fieldset {
+  display: flex;
+  align-content: center;
+  flex-flow: column;
+  border: none;
+}
+
+#email {
+  margin: 1em auto;
+  width: 60%;
+  padding: 5px;
+}
+
+#submit {
+  margin: 10px auto;
+  padding: .5em 1em .3em 1em;
+  background-color: gold;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+}
+
+.features {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 400px;
+  width: 70%;
+  margin: auto;
+  padding: 1em;
+}
+
+.materials, .shipping, .quality {
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  margin: 3px;
+}
+
+.icon {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-size: 3em;
+  color: orange;
+  width: 90px;
+  margin: 2px;
+}
+
+.description {
+  align-self: center;
+  width: 80%;
+  margin: auto;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  order: 2;
+  margin: 1em auto;
+  padding: 2%;
+}
+
+.pricing {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  order: 3;
+  height: auto;
+  width: 75%;
+  margin: auto;
+  padding: 1rem .5rem;
+}
+
+.trombone {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 31%;
+  height: 360px;
+  border: 1px solid black;
+}
+
+.tenor-header, .bass-header, .valve-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  margin: 0;
+  background-color: hsla(10, 0%, 80%, 1);
+;
+}
+
+price {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 16px;
+}
+
+.tenor-description, .bass-description, .valve-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+  text-align: center;
+}
+
+#tenor, #bass, #valve{
+  list-style: none;
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  width: auto;
+  margin: 0;
+}
+
+.btn {
+  align-self: center;
+  background-color: gold;
+  padding: 10px 15px;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+}
+
+#footer {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  width: 75%;
+  margin: 10px auto 0 auto;
+  padding: 1rem 1rem;
+  background-color: hsla(10, 0%, 80%, 1);
+}
+
+#nav-footer {
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+}
+
+#nav-footer > li {
+  margin: 5px 10px;
+}
+
+#address {
+  align-self: flex-start;
+  margin-bottom: -15px;
+  color: hsla(0,0%,0%,0.3);
+}
+
+@media screen and (max-width: 960px) {
+  .features, .video, .pricing, #form {
+    width: 100%;
+    margin: auto;
+  }
+  #footer {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pricing {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 1200px;
+  }
+
+  .trombone {
+    display: flex;
+    justify-content: space-evenly;
+
+    min-width: 300px;
+    max-width: 80vw;
+  }
+  /*.icon {
+    display: none;
+  }
+  .description {
+    width: 100%;
+  }*/
+  .nav-link {
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    flex-direction: column;
+    height: 420px;
+  }
+
+  .icon {
+    display: none;
+  }
+  .description {
+    width: auto;
+  }
+  #fieldset {
+    align-items: center;
+  }
+  #legend {
+    text-align: center;
+  }
+}
